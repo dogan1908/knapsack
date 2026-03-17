@@ -1,0 +1,49 @@
+{
+  "title": "Verdrängungsimpuls und Ersetzungswert: Eine relationale Matrixmethode für das 0/1-Knapsack-Problem",
+  "upload_type": "publication",
+  "publication_type": "preprint",
+  "description": "A novel relational heuristic for the 0/1 knapsack problem based on an n×n proportional matrix. Each item is simultaneously treated as container and content. The matrix cell M[i][j] = floor(w_i/w_j) * v_j/v_i quantifies the replacement value: how much more valuable would the weight slot of item i be if filled with copies of item j? The derived core score M-bar_j (mean replacement value over all accepting containers) is parameter-free, O(n²), and independent of knapsack capacity W. The method uses the UKP dominance operator floor(w_i/w_j) — known as Simple Dominance (Kellerer et al., 2004) and Threshold Dominance (Andonov et al., 2000) — not for item elimination but for relational scoring, creating a bridge between unbounded and 0/1 knapsack theory not previously present in the literature.",
+  "creators": [
+    {
+      "name": "Balban, Dogan",
+      "affiliation": "Independent Researcher"
+    }
+  ],
+  "keywords": [
+    "knapsack problem",
+    "0/1 knapsack",
+    "combinatorial optimization",
+    "heuristic",
+    "relational matrix",
+    "replacement value",
+    "displacement impulse",
+    "UKP operator",
+    "simple dominance",
+    "threshold dominance",
+    "W-independent",
+    "parameter-free",
+    "blocking detection",
+    "Fourier analysis",
+    "operations research"
+  ],
+  "license": "CC-BY-4.0",
+  "language": "deu",
+  "access_right": "open",
+  "related_identifiers": [
+    {
+      "identifier": "978-3-540-40286-2",
+      "relation": "cites",
+      "scheme": "isbn"
+    },
+    {
+      "identifier": "10.1016/S0377-2217(99)00265-9",
+      "relation": "cites",
+      "scheme": "doi"
+    },
+    {
+      "identifier": "10.1287/opre.5.2.266",
+      "relation": "cites",
+      "scheme": "doi"
+    }
+  ]
+}

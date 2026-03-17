@@ -1,0 +1,281 @@
+% ─────────────────────────────────────────────────────────────────────
+% Knapsack Problem – Bibliographie
+% Alle Einträge manuell geprüft und mit DOI/URL versehen
+% ─────────────────────────────────────────────────────────────────────
+
+% ── GRUNDLAGENWERKE ──────────────────────────────────────────────────
+
+@article{bellman1957,
+  author    = {Bellman, Richard},
+  title     = {Dynamic Programming},
+  journal   = {Science},
+  year      = {1957},
+  volume    = {153},
+  number    = {3731},
+  pages     = {34--37},
+  doi       = {10.1126/science.153.3731.34},
+  note      = {Grundlegende Formulierung der Dynamischen Programmierung}
+}
+
+@article{dantzig1957,
+  author    = {Dantzig, George B.},
+  title     = {Discrete-variable extremum problems},
+  journal   = {Operations Research},
+  year      = {1957},
+  volume    = {5},
+  number    = {2},
+  pages     = {266--277},
+  doi       = {10.1287/opre.5.2.266},
+  note      = {Ursprung des Greedy v/w-Algorithmus für das Knapsack-Problem}
+}
+
+@article{kolesar1967,
+  author    = {Kolesar, Peter J.},
+  title     = {A branch and bound algorithm for the knapsack problem},
+  journal   = {Management Science},
+  year      = {1967},
+  volume    = {13},
+  number    = {9},
+  pages     = {723--735},
+  doi       = {10.1287/mnsc.13.9.723}
+}
+
+@article{ibarra1975,
+  author    = {Ibarra, Oscar H. and Kim, Chul E.},
+  title     = {Fast approximation algorithms for the knapsack and sum of subset problems},
+  journal   = {Journal of the ACM},
+  year      = {1975},
+  volume    = {22},
+  number    = {4},
+  pages     = {463--468},
+  doi       = {10.1145/321906.321909},
+  note      = {Erste FPTAS-Konstruktion für das Knapsack-Problem}
+}
+
+% ── STANDARDWERKE (BÜCHER) ───────────────────────────────────────────
+
+@book{martello1990,
+  author    = {Martello, Silvano and Toth, Paolo},
+  title     = {Knapsack Problems: Algorithms and Computer Implementations},
+  publisher = {John Wiley \& Sons},
+  year      = {1990},
+  address   = {Chichester},
+  isbn      = {978-0-471-92420-3}
+}
+
+@book{kellerer2004,
+  author    = {Kellerer, Hans and Pferschy, Ulrich and Pisinger, David},
+  title     = {Knapsack Problems},
+  publisher = {Springer},
+  year      = {2004},
+  address   = {Berlin, Heidelberg},
+  doi       = {10.1007/978-3-540-24777-7},
+  isbn      = {978-3-540-40286-2},
+  note      = {Standardreferenz; enthält Simple Dominance: $x_j = \lfloor w_i/w_j \rfloor$}
+}
+
+% ── ALGORITHMEN & HEURISTIKEN ────────────────────────────────────────
+
+@inproceedings{hristakeva2005,
+  author    = {Hristakeva, Maya and Shrestha, Dipti},
+  title     = {Different Approaches to Solve the 0/1 Knapsack Problem},
+  booktitle = {Proceedings of the Midwest Instruction and Computing Symposium (MICS)},
+  year      = {2005},
+  pages     = {1--12},
+  url       = {https://micsymposium.org/mics_2005/papers/paper102.pdf},
+  note      = {Vergleich von Greedy-nach-Wert, Greedy-nach-Gewicht, Greedy v/w,
+               Branch\&Bound, DP und genetischen Algorithmen}
+}
+
+@article{hristakeva2023,
+  author    = {Hristakeva, Maya and Shrestha, Dipti and others},
+  title     = {Using Heuristic Algorithms to Solve the 0-1 Knapsack Problem},
+  journal   = {ResearchGate Preprint},
+  year      = {2023},
+  url       = {https://www.researchgate.net/publication/378614193},
+  note      = {Einführung von Defensive Greedy und Max-of-Two; O$(n\log n)$}
+}
+
+@article{pisinger1995,
+  author    = {Pisinger, David},
+  title     = {An expanding-core algorithm for the exact 0-1 knapsack problem},
+  journal   = {European Journal of Operational Research},
+  year      = {1995},
+  volume    = {87},
+  number    = {1},
+  pages     = {175--187},
+  doi       = {10.1016/0377-2217(94)00013-3},
+  note      = {MINKNAP: Expanding-Core DP mit minimaler Enumeration}
+}
+
+@article{pisinger1997,
+  author    = {Pisinger, David},
+  title     = {A minimal algorithm for the 0-1 knapsack problem},
+  journal   = {Operations Research},
+  year      = {1997},
+  volume    = {45},
+  number    = {5},
+  pages     = {758--767},
+  doi       = {10.1287/opre.45.5.758},
+  note      = {Reduktion auf minimalen Core mit Sorting-by-need}
+}
+
+@article{pisinger2005,
+  author    = {Pisinger, David},
+  title     = {Where are the hard knapsack problems?},
+  journal   = {Computers \& Operations Research},
+  year      = {2005},
+  volume    = {32},
+  number    = {9},
+  pages     = {2271--2284},
+  doi       = {10.1016/j.cor.2004.03.002},
+  note      = {Klassifikation in unkorrelliert / schwach / stark korrelliert}
+}
+
+% ── DOMINANZ & PREPROCESSING ─────────────────────────────────────────
+
+@article{andonov2000,
+  author    = {Andonov, Rumen and Poirriez, Vincent and Rajopadhye, Sanjay},
+  title     = {Unbounded knapsack problem: Dynamic programming revisited},
+  journal   = {European Journal of Operational Research},
+  year      = {2000},
+  volume    = {123},
+  number    = {2},
+  pages     = {394--407},
+  doi       = {10.1016/S0377-2217(99)00265-9},
+  note      = {EDUK: Threshold-Dominanz; exakt die Simple-Dominance-Struktur
+               $x_j = \lfloor w_i/w_j \rfloor$ die unsere Matrix nutzt}
+}
+
+@article{balev2008,
+  author    = {Balev, Stefan and Yanev, Nicola and Fr{\'e}ville, Arnaud and Andonov, Rumen},
+  title     = {A dynamic programming based reduction procedure for the
+               multidimensional 0-1 knapsack problem},
+  journal   = {European Journal of Operational Research},
+  year      = {2008},
+  volume    = {186},
+  number    = {1},
+  pages     = {63--76},
+  doi       = {10.1016/j.ejor.2006.02.058},
+  note      = {Zweiphasiger Ansatz: LP-Preprocessing + DP; direkte Analogie
+               zu unserem Matrix-Vorfilter + DP-Hybridverfahren}
+}
+
+@article{hifi2007,
+  author    = {Hifi, Mhand and Michrafy, Mustapha},
+  title     = {Reduction strategies and exact algorithms for the disjunctively
+               constrained knapsack problem},
+  journal   = {Computers \& Operations Research},
+  year      = {2007},
+  volume    = {34},
+  number    = {9},
+  pages     = {2657--2673},
+  doi       = {10.1016/j.cor.2005.10.004},
+  note      = {Preprocessing durch Fixierungsregeln; Laufzeitreduktion durch
+               Variablenelimination vor dem DP-Schritt}
+}
+
+% ── PAARWEISE VERGLEICHE & INSTANZANALYSE ────────────────────────────
+
+@article{smithmiles2021,
+  author    = {Smith-Miles, Kate and Christiansen, Janos and
+               Mu{\~n}oz, Mario Andr{\'e}s},
+  title     = {Revisiting where are the hard knapsack problems?
+               via Instance Space Analysis},
+  journal   = {Computers \& Operations Research},
+  year      = {2021},
+  volume    = {128},
+  pages     = {105184},
+  doi       = {10.1016/j.cor.2020.105184},
+  note      = {Instance Space Analysis; O$(n^2)$ Dominant-Pairs-Features --
+               direkte strukturelle Analogie zum Matrix-Score}
+}
+
+@article{gallo1980,
+  author    = {Gallo, Giorgio and Hammer, Peter L. and Simeone, Bruno},
+  title     = {Quadratic knapsack problems},
+  journal   = {Mathematical Programming},
+  year      = {1980},
+  volume    = {12},
+  number    = {1},
+  pages     = {132--149},
+  doi       = {10.1007/BFb0120892},
+  note      = {Quadratic KP: paarweise Nutzenwerte -- nächster konzeptueller
+               Verwandter der relationalen Matrix}
+}
+
+@article{martello1981,
+  author    = {Martello, Silvano and Toth, Paolo},
+  title     = {A bound and bound algorithm for the zero-one multiple knapsack problem},
+  journal   = {Discrete Applied Mathematics},
+  year      = {1981},
+  volume    = {3},
+  number    = {4},
+  pages     = {275--288},
+  doi       = {10.1016/0166-218X(81)90005-6},
+  note      = {Multiple Knapsack Problem: strukturelle Grundlage für
+               die Waren-als-Container-Idee}
+}
+
+% ── ERDŐS-KAC & ZAHLENTHEORIE ────────────────────────────────────────
+
+@article{erdos1940,
+  author    = {Erd{\H{o}}s, Paul and Kac, Mark},
+  title     = {The Gaussian law of errors in the theory of additive number
+               theoretic functions},
+  journal   = {American Journal of Mathematics},
+  year      = {1940},
+  volume    = {62},
+  number    = {1},
+  pages     = {738--742},
+  doi       = {10.2307/2371483},
+  note      = {Normalverteilung der Primfaktoranzahl; Grundlage der
+               Galton-Brett-Analogie in dieser Arbeit}
+}
+
+@book{hardy1979,
+  author    = {Hardy, Godfrey Harold and Wright, Edward Maitland},
+  title     = {An Introduction to the Theory of Numbers},
+  edition   = {5},
+  publisher = {Oxford University Press},
+  year      = {1979},
+  address   = {Oxford},
+  isbn      = {978-0-19-853171-5},
+  note      = {Herleitung $6/\pi^2$ als Dichte quadratfreier Zahlen (Theorem 333)}
+}
+
+% ── WEITERE VERGLEICHSARBEITEN ───────────────────────────────────────
+
+@article{cacchiani2022,
+  author    = {Cacchiani, Valentina and Iori, Manuel and Locatelli, Alberto
+               and Martello, Silvano},
+  title     = {Knapsack problems -- An overview of recent advances.
+               Part {I}: Single knapsack problems},
+  journal   = {Computers \& Operations Research},
+  year      = {2022},
+  volume    = {143},
+  pages     = {105692},
+  doi       = {10.1016/j.cor.2021.105692},
+  note      = {Aktuellster Survey; deckt alle Varianten ab}
+}
+
+@article{plateau1982,
+  author    = {Plateau, G{\'e}rard and Elkihel, Mohammed},
+  title     = {A hybrid method for the 0-1 knapsack problem},
+  journal   = {Methods of Operations Research},
+  year      = {1982},
+  volume    = {49},
+  pages     = {277--293},
+  note      = {Erster hybrider B\&B+DP-Ansatz; Vorläufer der
+               Preprocessing+DP-Paradigms}
+}
+
+@techreport{pisinger2003hard,
+  author      = {Pisinger, David},
+  title       = {Where are the hard knapsack problems?},
+  institution = {DIKU, University of Copenhagen},
+  year        = {2003},
+  number      = {03-08},
+  url         = {https://di.ku.dk/forskning/Publikationer/tekniske_rapporter/tekniske-rapporter-2003/03-08.pdf},
+  note        = {Technischer Bericht; Vorläufer von Pisinger (2005)}
+}
