@@ -4,6 +4,7 @@
 **Datum:** März 2026  
 **Sprache:** Deutsch  
 **Status:** Preprint
+https://doi.org/10.5281/zenodo.19078947
 
 ---
 
@@ -80,6 +81,7 @@ pdflatex knapsack_balban2026.tex
              Matrixmethode für das 0/1-Knapsack-Problem},
   year    = {2026},
   note    = {Preprint, Independent Research}
+  https://doi.org/10.5281/zenodo.19078947
 }
 ```
 
